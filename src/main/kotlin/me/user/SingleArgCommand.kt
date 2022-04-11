@@ -8,5 +8,5 @@ abstract class SingleArgCommand: Command {
         return if (input.size == 1) handleArg(input.first()) else Command.Status.INVALID
     }
 
-    protected abstract fun handleArg(arg: String): Command.Status
+    protected abstract fun handleArg(userName: String): Command.Status
 }
