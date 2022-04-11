@@ -3,14 +3,8 @@ package me.user
 import javax.inject.Inject
 
 class CommandRouter @Inject constructor(
-    private val command: Command
+    private val commands: Map<String, @JvmSuppressWildcards Command>
 ) {
-
-    private val commands: HashMap<String, Command> = HashMap()
-
-    init {
-        commands[command.key()] = command
-    }
 
     fun route(input: String): Command.Status {
         println("Command received $input")
