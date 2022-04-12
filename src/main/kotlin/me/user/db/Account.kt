@@ -4,5 +4,9 @@ import java.math.BigDecimal
 
 data class Account(
     val userName: String,
-    val balance: BigDecimal = BigDecimal.ZERO
-)
+    var balance: BigDecimal = BigDecimal.ZERO
+) {
+    fun deposit(deposit: BigDecimal) {
+        balance += deposit
+    }
+}

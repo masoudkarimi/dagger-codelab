@@ -5,6 +5,10 @@ import javax.inject.Inject
 class Database @Inject constructor(
 
 ) {
+    init {
+        println("Creating a new $this")
+    }
+
     private val accounts: MutableMap<String, @JvmSuppressWildcards Account> = HashMap()
 
     fun getAccount(userName: String) : Account {
